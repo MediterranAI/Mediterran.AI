@@ -699,11 +699,30 @@
 
     const data = Object.fromEntries(new FormData(leadForm).entries());
 
+    // Honeypot anti-spam
+    if (data._honey) { submitBtn.disabled = false; submitBtn.textContent = originalText; return; }
+
+    // 1) Guardar el lead en el panel de Rafel (CRM centralizado en el dashboard)
+    const rafelReq = fetch('https://dfattkvjqlzeznrelijd.supabase.co/functions/v1/form-submission', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: data['Nombre'],
+        company_name: data['Cl\u00ednica'],
+        email: data['Email'],
+        phone: data['Tel\u00e9fono'],
+        message: data['Mensaje']
+      })
+    });
+
+    // 2) Enviar tambi\u00e9n el aviso por email (best-effort)
     fetch('https://formsubmit.co/ajax/mediterran.ai@gmail.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(data)
-    })
+    }).catch(function(){});
+
+    rafelReq
     .then(res => {
       if(!res.ok) throw new Error('bad response');
       return res.json();

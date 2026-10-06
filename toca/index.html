@@ -176,6 +176,13 @@
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .boton, summary::after { transition: none; } }
   .hoja { color: var(--madera-osc); flex: none; }
   .portada .hoja, .marca .hoja { color: #C98B3C; }
+  .lisas { display: grid; gap: 14px; grid-template-columns: 1fr 1fr 1fr; }
+  .lisas figure { margin: 0; } .lisas img { aspect-ratio: 1 / 1; object-fit: cover; }
+  .lisas figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; }
+  @media (max-width: 640px) { .lisas { grid-template-columns: 1fr; } }
+  .marca .nombre { display: flex; flex-direction: column; line-height: 1.05; }
+  .marca small { font-family: var(--body); font-weight: 700; font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: #C98B3C; margin-top: 4px; }
+  @media (max-width: 520px) { .marca small { display: none; } }
 </style>
 </head>
 <body>
@@ -186,7 +193,7 @@
 
 <header class="cabecera">
   <div class="envoltura">
-    <a class="marca" href="/"><svg class="hoja" viewBox="0 0 132 120" width="38" height="35" aria-hidden="true"><path d="M6 104C12 66 36 38 72 24C68 62 42 94 6 104Z" fill="currentColor"/><path d="M14 98C32 72 50 50 66 34" stroke="#F5ECDD" stroke-width="3.6" fill="none" stroke-linecap="round"/><path d="M88 46a18 18 0 0 1 0 26M100 36a32 32 0 0 1 0 46M112 26a46 46 0 0 1 0 66" stroke="currentColor" stroke-width="7" fill="none" stroke-linecap="round"/></svg><span>Toca <em>Ullastre</em></span></a>
+    <a class="marca" href="/"><svg class="hoja" viewBox="0 0 132 120" width="38" height="35" aria-hidden="true"><path d="M6 104C12 66 36 38 72 24C68 62 42 94 6 104Z" fill="currentColor"/><path d="M14 98C32 72 50 50 66 34" stroke="#F5ECDD" stroke-width="3.6" fill="none" stroke-linecap="round"/><path d="M88 46a18 18 0 0 1 0 26M100 36a32 32 0 0 1 0 46M112 26a46 46 0 0 1 0 66" stroke="currentColor" stroke-width="7" fill="none" stroke-linecap="round"/></svg><span class="nombre">Toca <em>Ullastre</em><small>Placas NFC de madera · Hecho a mano en Mallorca</small></span></a>
     <nav aria-label="Secciones">
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#hecho-a-mano">Hecho a mano</a>
@@ -204,7 +211,7 @@
     <div class="envoltura">
       <div class="kicker">Hecho a mano en Mallorca</div>
       <h1>Placas de ullastre con chip NFC</h1>
-      <p class="lead">Un trozo de Mallorca en tu barra. Tus clientes acercan el móvil y te dejan una reseña en segundos, sin descargar nada. Y sin cuotas mensuales: pagas la placa una vez y es tuya.</p>
+      <p class="lead">Hecha a mano en Mallorca y personalizada para tu negocio: cada placa es una pieza única y no hay dos iguales. Tus clientes acercan el móvil y te dejan una reseña en segundos, sin descargar nada. Y sin cuotas mensuales: pagas la placa una vez y es tuya.</p>
       <div class="acciones">
         <a class="boton boton-wa" href="https://wa.me/34669107046?text=Hola%2C%20me%20interesan%20las%20placas%20de%20ullastre%20con%20NFC" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Pide la tuya por WhatsApp</a>
         <a class="boton boton-linea" href="#precios">Ver precios</a>
@@ -277,6 +284,12 @@
         <div class="formato"><img class="foto" src="img/0411-finca.webp" alt="Placa con base de ullastre en un patio mallorquín" width="856" height="1100" loading="lazy"><span class="medida">Placa 10 × 8 × 1,5 cm + base 4 × 10 × 2,5 cm</span><h3>Placa con base</h3><p class="muted">Se queda de pie sola. Para la barra, el mostrador o la recepción.</p></div>
         <div class="formato"><img class="foto" src="img/img_0427.webp" alt="Placa de ullastre sola en la mano" width="750" height="1000" loading="lazy"><span class="medida">10 × 8 × 1,5 cm</span><h3>Placa sola</h3><p class="muted">Para las mesas y la terraza, o para acercarla al cliente a la hora de cobrar.</p></div>
       </div>
+      <h3 style="margin: 34px 0 12px;">Así es la madera antes de grabar</h3>
+      <div class="lisas">
+        <figure><img class="foto" src="img/lisa-con-base.webp" alt="Placa de ullastre lisa con base, de pie" width="1000" height="750" loading="lazy"><figcaption>Con base, de pie</figcaption></figure>
+        <figure><img class="foto" src="img/lisa-sola.webp" alt="Placa de ullastre lisa sola en la mano" width="750" height="1000" loading="lazy"><figcaption>Sola, para cobrar o para la mesa</figcaption></figure>
+        <figure><img class="foto" src="img/lisa-grupo.webp" alt="Placas y bases de ullastre, de pie y tumbadas" width="750" height="1000" loading="lazy"><figcaption>De pie o tumbada: cada veta es única</figcaption></figure>
+      </div>
       <div class="tarjeta" style="margin-top: 26px;">
         <h3 style="margin-bottom: 14px;">Incluido en todas las placas</h3>
         <ul class="incluye">
@@ -296,7 +309,7 @@
   <section id="cliente" style="background: var(--blanco);">
     <div class="envoltura rejilla dos">
       <div>
-        <div class="kicker">Primer cliente</div>
+        <div class="kicker">Uno de nuestros clientes</div>
         <h2>Forn Sa Ràpita</h2>
         <p class="lead">Horno artesano en Sa Ràpita. Placas para la barra y las mesas, con su logo, el horario del autoservicio y los enlaces a Google, Instagram y Tripadvisor, en cuatro idiomas para su clientela local y turista.</p>
       </div>

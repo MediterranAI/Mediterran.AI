@@ -183,6 +183,11 @@
   .marca .nombre { display: flex; flex-direction: column; line-height: 1.05; }
   .marca small { font-family: var(--body); font-weight: 700; font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: #C98B3C; margin-top: 4px; }
   @media (max-width: 520px) { .marca small { display: none; } }
+  .videos { display: grid; gap: 22px; grid-template-columns: 1fr 1fr; max-width: 760px; margin: 28px auto; }
+  .videos figure { margin: 0; } .videos video { width: 100%; aspect-ratio: 9 / 16; border-radius: var(--radio); background: #000; object-fit: cover; }
+  .videos figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; text-align: center; }
+  .cta-fila { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 8px; }
+  @media (max-width: 560px) { .videos { grid-template-columns: 1fr; max-width: 340px; } }
 </style>
 </head>
 <body>
@@ -245,6 +250,23 @@
           <div class="paso"><div><h3>Te deja su reseña</h3><p>En el mejor momento: cuando todavía está en tu local y acaba de pasarlo bien.</p></div></div>
         </div>
         <div class="aviso">¿Cambias de página o de enlace? Te reprogramamos el chip gratis, siempre.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="video">
+    <div class="envoltura">
+      <div class="kicker">MÍRALO EN ACCIÓN</div>
+      <h2>Acercas el móvil. Se abre tu página.</h2>
+      <p class="lead muted">En segundos y sin descargar nada. Y así nace cada placa, a mano, en Mallorca: ninguna queda igual.</p>
+      <div class="videos">
+        <figure><video src="video/acerca-el-movil.mp4" poster="video/acerca-el-movil.jpg" controls playsinline muted preload="metadata" aria-label="Acercar el móvil a la placa abre la página del negocio"></video><figcaption>Acerca el móvil y se abre tu página</figcaption></figure>
+        <figure><video src="video/asi-nace-una-placa.mp4" poster="video/asi-nace-una-placa.jpg" controls playsinline muted preload="metadata" aria-label="Cómo se hace una placa de ullastre: lijado, grabado láser y chip NFC"></video><figcaption>Así nace una placa de ullastre</figcaption></figure>
+      </div>
+      <div class="cta-fila">
+        <a class="boton boton-wa" href="https://wa.me/34669107046?text=Hola%2C%20quiero%20pedir%20placas%20de%20Toca%20Ullastre" target="_blank" rel="noopener"><svg><use href="#wa"/></svg> Pedir mi placa por WhatsApp</a>
+        <a class="boton boton-linea" href="mailto:mediterran.ai@gmail.com?subject=Pedido%20de%20placas%20Toca%20Ullastre">Pedir por correo</a>
+        <a class="boton boton-linea" href="tel:+34669107046">Llamar 669 107 046</a>
       </div>
     </div>
   </section>

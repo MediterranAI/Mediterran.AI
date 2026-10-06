@@ -59,6 +59,9 @@
   .boton svg { width: 20px; height: 20px; flex: none; }
 
   /* Cabecera */
+  .logo-cab { height: 44px; width: auto; display: block; }
+  .portada .logo-grande { width: min(460px, 86vw); height: auto; display: block; margin-bottom: 26px; }
+  .cierre .logo-cierre { width: min(380px, 80vw); height: auto; margin: 0 auto 22px; display: block; }
   .cabecera { position: sticky; top: 0; z-index: 20; background: rgba(247, 242, 233, .92); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(74, 46, 23, .1); }
   .cabecera .envoltura { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 16px; }
   .marca { display: flex; align-items: center; gap: 10px; font-family: var(--display); font-weight: 800; font-size: 19px; text-decoration: none; }
@@ -198,7 +201,7 @@
 
 <header class="cabecera">
   <div class="envoltura">
-    <a class="marca" href="/"><svg class="hoja" viewBox="0 0 132 120" width="38" height="35" aria-hidden="true"><path d="M6 104C12 66 36 38 72 24C68 62 42 94 6 104Z" fill="currentColor"/><path d="M14 98C32 72 50 50 66 34" stroke="#F5ECDD" stroke-width="3.6" fill="none" stroke-linecap="round"/><path d="M88 46a18 18 0 0 1 0 26M100 36a32 32 0 0 1 0 46M112 26a46 46 0 0 1 0 66" stroke="currentColor" stroke-width="7" fill="none" stroke-linecap="round"/></svg><span class="nombre">Toca <em>Ullastre</em><small>Placas NFC de madera · Hecho a mano en Mallorca</small></span></a>
+    <a class="marca" href="/"><img class="logo-cab" src="img/logo-h-oscuro.png" alt="Toca Ullastre · Placas NFC de madera · Hecho a mano en Mallorca" width="1561" height="241"></a>
     <nav aria-label="Secciones">
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#hecho-a-mano">Hecho a mano</a>
@@ -214,6 +217,7 @@
   <section class="portada">
     <img src="img/0411-campo.webp" alt="Placa de ullastre con chip NFC sobre un banco de trabajo en el campo mallorquín" width="1244" height="1600" fetchpriority="high">
     <div class="envoltura">
+      <img class="logo-grande" src="img/logo-h-claro.png" alt="Toca Ullastre" width="1561" height="241">
       <div class="kicker">Hecho a mano en Mallorca</div>
       <h1>Placas de ullastre con chip NFC</h1>
       <p class="lead">Hecha a mano en Mallorca y personalizada para tu negocio: cada placa es una pieza única y no hay dos iguales. Tus clientes acercan el móvil y te dejan una reseña en segundos, sin descargar nada. Y sin cuotas mensuales: pagas la placa una vez y es tuya.</p>
@@ -419,6 +423,7 @@
 
   <section class="cierre">
     <div class="envoltura">
+      <img class="logo-cierre" src="img/logo-h-claro.png" alt="Toca Ullastre" width="1561" height="241" loading="lazy">
       <h2>¿Hacemos la tuya?</h2>
       <p class="lead">Escríbenos con tu logo y te enviamos el diseño. Sin compromiso.</p>
       <div class="acciones">

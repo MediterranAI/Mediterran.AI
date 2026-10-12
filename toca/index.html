@@ -134,6 +134,10 @@
   .galeria-caso { display: grid; gap: 12px; grid-template-columns: 1fr 1fr; }
   .galeria-caso .ancha { grid-column: 1 / -1; aspect-ratio: 16 / 9; }
   .galeria-caso img:not(.ancha) { aspect-ratio: 1; }
+  .reales { display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); margin-top: 22px; }
+  .reales .ancha { grid-column: 1 / -1; aspect-ratio: 4 / 3; }
+  .reales img:not(.ancha) { aspect-ratio: 3 / 4; }
+  @media (min-width: 900px) { .reales { grid-template-columns: repeat(3, 1fr); } .reales .ancha { grid-column: span 3; aspect-ratio: 16 / 9; } }
 
   .ejemplos { display: grid; gap: 18px; grid-template-columns: repeat(2, 1fr); }
   @media (min-width: 900px) { .ejemplos { grid-template-columns: repeat(4, 1fr); } }
@@ -328,6 +332,22 @@
           <li>Sin cuotas mensuales: pago único</li>
           <li>Barnizada para aguantar el uso diario</li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="reales">
+    <div class="envoltura">
+      <div class="kicker">Placas reales</div>
+      <h2>Así quedan, grabadas de verdad</h2>
+      <p class="muted" style="max-width: 70ch;">Placas de ullastre ya hechas para negocios de Mallorca: con su logo, sus enlaces y textos en varios idiomas. Cada una, con su veta.</p>
+      <div class="reales">
+        <img class="foto ancha" src="img/real-grupo-7-placas.webp" alt="Siete placas de ullastre con chip NFC en distintos formatos, con y sin base" width="1400" height="1050" loading="lazy">
+        <img class="foto" src="img/real-par-frontal.webp" alt="Dos placas de ullastre grabadas con estrellas y texto en cuatro idiomas" width="1050" height="1400" loading="lazy">
+        <img class="foto" src="img/real-par-canto.webp" alt="Detalle de la veta del ullastre en dos placas grabadas" width="1050" height="1400" loading="lazy">
+        <img class="foto" src="img/real-con-logo.webp" alt="Placa de ullastre grabada con logo, iconos de Google y Tripadvisor y estrellas" width="1050" height="1400" loading="lazy">
+        <img class="foto" src="img/real-peana-1.webp" alt="Placa de ullastre con base de madera y grabado láser" width="1050" height="1400" loading="lazy">
+        <img class="foto" src="img/real-peana-2.webp" alt="Placa de ullastre sobre su base, con el chip NFC y el icono de acercar el móvil" width="1050" height="1400" loading="lazy">
       </div>
     </div>
   </section>

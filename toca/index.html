@@ -190,7 +190,7 @@
   .marca .nombre { display: flex; flex-direction: column; line-height: 1.05; }
   .marca small { font-family: var(--body); font-weight: 700; font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: #C98B3C; margin-top: 4px; }
   @media (max-width: 520px) { .marca small { display: none; } }
-  .videos { display: grid; gap: 22px; grid-template-columns: 1fr 1fr; max-width: 760px; margin: 28px auto; }
+  .videos { display: grid; gap: 22px; grid-template-columns: repeat(3, 1fr); max-width: 1000px; margin: 28px auto; }
   .videos figure { margin: 0; } .videos video { width: 100%; aspect-ratio: 9 / 16; border-radius: var(--radio); background: #000; object-fit: cover; }
   .videos figcaption { font-size: 14px; color: var(--muted); margin-top: 8px; text-align: center; }
   .cta-fila { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 8px; }
@@ -268,7 +268,8 @@
       <h2>Acercas el móvil. Se abre tu página.</h2>
       <p class="lead muted">En segundos y sin descargar nada. Y así nace cada placa, a mano, en Mallorca: ninguna queda igual.</p>
       <div class="videos">
-        <figure><video src="video/acerca-el-movil.mp4" poster="video/acerca-el-movil.jpg" controls playsinline muted preload="metadata" aria-label="Acercar el móvil a la placa abre la página del negocio"></video><figcaption>Acerca el móvil y se abre tu página</figcaption></figure>
+        <figure><video src="video/toca-un-toque.mp4" poster="video/toca-un-toque.jpg" controls playsinline muted preload="metadata" aria-label="Acercar el móvil a la placa abre la página de reseñas del negocio"></video><figcaption>Acerca el móvil y se abre tu página</figcaption></figure>
+        <figure><video src="video/toca-tres-pasos.mp4" poster="video/toca-tres-pasos.jpg" controls playsinline muted preload="metadata" aria-label="Cómo funciona la placa en tres pasos"></video><figcaption>Cómo funciona, en 3 pasos</figcaption></figure>
         <figure><video src="video/asi-nace-una-placa.mp4" poster="video/asi-nace-una-placa.jpg" controls playsinline muted preload="metadata" aria-label="Cómo se hace una placa de ullastre: lijado, grabado láser y chip NFC"></video><figcaption>Así nace una placa de ullastre</figcaption></figure>
       </div>
       <div class="cta-fila">
